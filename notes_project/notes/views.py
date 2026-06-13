@@ -71,6 +71,17 @@ def putnote(request):
           }
      )
 
+def notes(request,id):
+     if request.method == "GET":
+          notes=Note.objects.get(id=id)
+          return JsonResponse(
+               {
+                    "id" : notes.id,
+                    "title" : notes.title,
+                    "content" : notes.content
+               }
+          )
+     
 
 
 
