@@ -16,7 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from notes.views import deln,hello,hi,getnotes,notes,putnote
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('hello/',hello),
+    path('hi/',hi),
+    path('getnotes/',getnotes),
+    path('notes/',notes),
+    path('delnote/',deln),
+    path('update/',putnote)
 ]
